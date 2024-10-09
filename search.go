@@ -9,16 +9,9 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Println("用法: search [搜索引擎] <搜索内容>")
-		fmt.Println("搜索引擎: google, bing, baidu, github, luxirity")
-		fmt.Println("示例: search 你好")
-		return
-	}
-
 	engine := os.Getenv("DEFAULT_SEARCH_ENGINE")
 	if engine == "" {
-		engine = "google" // 默认搜索引擎
+		engine = "google"
 	}
 
 	query := strings.Join(os.Args[1:], " ")
@@ -38,10 +31,14 @@ func main() {
 		url = fmt.Sprintf("https://www.baidu.com/s?wd=%s", strings.ReplaceAll(query, " ", "+"))
 	case "github":
 		url = fmt.Sprintf("https://github.com/search?q=%s", strings.ReplaceAll(query, " ", "+"))
-	case "luxirity":
-		url = fmt.Sprintf("https://search.luxirty.com/search?q=%s", strings.ReplaceAll(query, " ", "+"))
+	case "chatgpt":
+		url = fmt.Sprintf("https://chat.openai.com?q=%s", strings.ReplaceAll(query, " ", "+"))
+	case "perplexity":
+		url = fmt.Sprintf("https://www.perplexity.ai/?q=%s", strings.ReplaceAll(query, " ", "+"))
+	case "jike":
+		url = fmt.Sprintf("https://web.okjike.com/search?keyword=%s", strings.ReplaceAll(query, " ", "+"))
 	default:
-		fmt.Println("不支持的搜索引擎")
+		fmt.Println("This engine is not supported")
 		return
 	}
 
