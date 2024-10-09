@@ -58,7 +58,7 @@ set DEFAULT_SEARCH_ENGINE=bing
 search [搜索引擎] <搜索内容>
 ```
 
-- `搜索引擎`：可选参数，指定搜索引擎，支持 `google`、`bing`、`baidu`、`github`、`luxirity`。
+- `搜索引擎`：可选参数，指定搜索引擎，支持 `google`、`bing`、`baidu`、`github`、`chatgpt`、`perplexity`、`jike`、。
 - `搜索内容`：必填参数，指定要搜索的内容。
 
 ### 示例
@@ -81,7 +81,8 @@ search [搜索引擎] <搜索内容>
 - Baidu
 - GitHub
 - Perplexity
-- jike
+- ChatGPT
+- Jike
 
 ## 贡献
 
