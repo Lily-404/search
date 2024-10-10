@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	
 	engine := os.Getenv("DEFAULT_SEARCH_ENGINE")
 	if engine == "" {
 		engine = "google"
