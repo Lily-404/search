@@ -6,7 +6,13 @@ import (
 	"os/exec"
 	"runtime"
 	"strings"
+
+	"gosearch/info"
 )
+
+func isHelpFlag(flag string) bool {
+	return strings.HasPrefix(flag, "-") || strings.HasPrefix(flag, "--")
+}
 
 func main() {
 	
@@ -21,7 +27,12 @@ func main() {
 	if len(os.Args) >= 3 {
 		engine = os.Args[1]
 		query = strings.Join(os.Args[2:], " ")
+	} else if len(os.Args) == 2 && isHelpFlag(os.Args[1]) {
+		info.Help()
+		return
 	}
+
+	
 
 	switch engine {
 	case "google":
@@ -52,10 +63,11 @@ func main() {
 	case "darwin":
 		err = exec.Command("open", url).Start()
 	default:
-		err = fmt.Errorf("不支持的操作系统")
+		err = fmt.Errorf("Unsupported operating system")
 	}
 
 	if err != nil {
-		fmt.Println("打开浏览器时出错:", err)
+		fmt.Println("Error opening browser:", err)
 	}
 }
+

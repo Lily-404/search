@@ -1,4 +1,4 @@
-module your_project_name
+module gosearch
 
 go 1.22.3
 
