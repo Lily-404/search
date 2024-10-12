@@ -40,13 +40,14 @@ Gosearch是一个简单的命令行工具，可以在终端中直接搜索内容
 search -s || --set
 ```
 
-```### 运行搜索命令
+### 运行搜索命令
 
 在终端中运行以下命令进行搜索：
 
 ```
 search [搜索引擎] <搜索内容>
 ```
+
 - `搜索引擎`：可选参数，指定搜索引擎，支持 `google`、`bing`、`baidu`、`jike`、`perplextity`、`bilibibli`、`youtube`、`github`、`chatgpt`。
 - `搜索内容`：必填参数，指定要搜索的内容。
 
