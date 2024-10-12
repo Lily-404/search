@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/url"
 	"os"
 	"os/exec"
 	"runtime"
@@ -53,6 +54,10 @@ func main() {
 		url = fmt.Sprintf("https://www.perplexity.ai/?q=%s", strings.ReplaceAll(query, " ", "+"))
 	case "jike":
 		url = fmt.Sprintf("https://web.okjike.com/search?keyword=%s", strings.ReplaceAll(query, " ", "+"))
+	case "bilibili":
+		url = fmt.Sprintf("https://search.bilibili.com/all?keyword=%s", strings.ReplaceAll(query, " ","+"))
+	case "youtube":
+		url = fmt.Sprintf("https://www.youtube.com/results?search_query=%s", strings.ReplaceAll(query, " ", "+"))
 	default:
 		fmt.Println("This engine is not supported")
 		return

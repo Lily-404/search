@@ -1,6 +1,6 @@
-# Search CLI
+# Gosearch
 
-Search CLI 是一个简单的命令行工具，可以在终端中直接搜索内容并打开浏览器进行搜索。支持多种搜索引擎，包括Google、Bing、Baidu、GitHub和Luxirity。
+Gosearch是一个简单的命令行工具，可以在终端中直接搜索内容并打开浏览器进行搜索。支持多种搜索引擎，包括Google、Bing、Baidu、Bilibili、Jike、Youtube、ChatGPT和GitHub
 
 ## 功能特性
 
@@ -36,29 +36,18 @@ Search CLI 是一个简单的命令行工具，可以在终端中直接搜索内
 
 ### 设置默认搜索引擎
 
-你可以通过设置环境变量 `DEFAULT_SEARCH_ENGINE` 来指定默认搜索引擎。例如，设置默认搜索引擎为 Bing：
-
-在 Linux 或 macOS 上：
-
 ```
-export DEFAULT_SEARCH_ENGINE=bing
+search -s || --set
 ```
 
-在 Windows 上：
-
-```
-set DEFAULT_SEARCH_ENGINE=bing
-```
-
-### 运行搜索命令
+```### 运行搜索命令
 
 在终端中运行以下命令进行搜索：
 
 ```
 search [搜索引擎] <搜索内容>
 ```
-
-- `搜索引擎`：可选参数，指定搜索引擎，支持 `google`、`bing`、`baidu`、`github`、`chatgpt`。
+- `搜索引擎`：可选参数，指定搜索引擎，支持 `google`、`bing`、`baidu`、`jike`、`perplextity`、`bilibibli`、`youtube`、`github`、`chatgpt`。
 - `搜索内容`：必填参数，指定要搜索的内容。
 
 ### 示例
@@ -81,6 +70,10 @@ search [搜索引擎] <搜索内容>
 - Baidu
 - GitHub
 - Perplexity
+- ChatGPT
+- Jike
+- Bilibili
+- Youtube
 
 ## 贡献
 
