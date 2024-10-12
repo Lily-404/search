@@ -33,7 +33,11 @@ func Help() {
 	}
 
 	if *engineFlag || *enginLongFlag {
-		fmt.Printf("当前的搜索引擎: %s\n", engine)
+		if engine != nil {
+			fmt.Printf("当前的搜索引擎: %s\n", *engine)
+		} else {
+			fmt.Println("当前的搜索引擎未设置")
+		}
 		return
 	}
 
@@ -43,8 +47,7 @@ func Help() {
 		fmt.Print("输入新的默认搜索引擎: ")
 		fmt.Scanln(&newEngine)
 		if newEngine != "" {
-			// config.SetEngine(newEngine)
-			config.DefaultEngine = newEngine
+			config.SetDefaultEngine(newEngine)
 			fmt.Printf("默认搜索引擎已设置为: %s\n", newEngine)
 			return
 		} else {
@@ -64,8 +67,8 @@ func ShowHelp() {
 	fmt.Println("The commands are:")
 	fmt.Println("  -h, --help      显示帮助信息")
 	fmt.Println("  -v, --version   版本打印")
-	fmt.Println("  -w, --waht      查看当前的搜索引擎")
-	fmt.Println("  -s, --set         设置默认搜索引擎")
+	fmt.Println("  -w, --what      查看当前的搜索引擎")
+	fmt.Println("  -s, --set       设置默认搜索引擎")
 	fmt.Println(" ")
 	fmt.Println("Use \"gosearch help <command>\" for more information about a command.")
 	fmt.Println(" ")

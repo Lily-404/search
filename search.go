@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"strings"
 
-	"gosearch/info"
 	"gosearch/config"
+	"gosearch/info"
 )
 
 func isHelpFlag(flag string) bool {
@@ -18,24 +18,27 @@ func isHelpFlag(flag string) bool {
 func main() {
 
 	// engine := os.Getenv("DEFAULT_SEARCH_ENGINE")
+	config.Init()
 	engine := config.DefaultEngine
 
 	query := strings.Join(os.Args[1:], " ")
 	var url string
 
 	if len(os.Args) >= 3 {
-		engine = os.Args[1]
+		newEngine := os.Args[1]
+		config.SetDefaultEngine(newEngine)
 		query = strings.Join(os.Args[2:], " ")
-	}else if len(os.Args) == 2 && isHelpFlag(os.Args[1]) {
+	} else if len(os.Args) == 2 && isHelpFlag(os.Args[1]) {
 		info.Help()
 		return
 	}
-	
-	if engine == "" {
-		engine = "google"
+
+	if engine == nil {
+		config.Init()
+		engine = config.DefaultEngine
 	}
-	
-	switch engine {
+
+	switch *engine {
 	case "google":
 		url = fmt.Sprintf("https://www.google.com/search?q=%s", strings.ReplaceAll(query, " ", "+"))
 	case "bing":
@@ -71,4 +74,3 @@ func main() {
 		fmt.Println("Error opening browser:", err)
 	}
 }
-
