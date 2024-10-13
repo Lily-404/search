@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"net/url"
 	"os"
 	"os/exec"
 	"runtime"
@@ -27,8 +26,8 @@ func main() {
 
 	if len(os.Args) >= 3 {
 		newEngine := os.Args[1]
-		config.SetDefaultEngine(newEngine)
 		query = strings.Join(os.Args[2:], " ")
+		engine = &newEngine
 	} else if len(os.Args) == 2 && isHelpFlag(os.Args[1]) {
 		info.Help()
 		return

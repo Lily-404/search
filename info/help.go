@@ -41,7 +41,6 @@ func Help() {
 		return
 	}
 
-
 	if *setEngineFlag || *setEngineLongFlag {
 		var newEngine string
 		fmt.Print("输入新的默认搜索引擎: ")
@@ -59,22 +58,19 @@ func Help() {
 }
 
 func ShowHelp() {
-	fmt.Println("GoSearch —— 搜索无界")
+	fmt.Println("GoSearch —— Think Different")
 	fmt.Println(" ")
 	fmt.Println("Usage:")
-	fmt.Println("  gosearch <command> [arguments]")
+	fmt.Println("  gosearch <content>")
+	fmt.Println("  gosearch [engine] <content>")
 	fmt.Println(" ")
 	fmt.Println("The commands are:")
-	fmt.Println("  -h, --help      显示帮助信息")
-	fmt.Println("  -v, --version   版本打印")
-	fmt.Println("  -w, --what      查看当前的搜索引擎")
-	fmt.Println("  -s, --set       设置默认搜索引擎")
+	fmt.Println("  -h, --help      Display help information")
+	fmt.Println("  -v, --version   Print version")
+	fmt.Println("  -w, --what      View current search engine")
+	fmt.Println("  -s, --set       Set default search engine")
 	fmt.Println(" ")
-	fmt.Println("Use \"gosearch help <command>\" for more information about a command.")
-	fmt.Println(" ")
-	fmt.Println("Additional help topics:")
-	fmt.Println(" ")
-	fmt.Println("  engine          搜索引擎选项")
-	fmt.Println(" ")
-	fmt.Println("Use \"gosearch help <topic>\" for more information about that topic.")
+	fmt.Println("Supported search engines:")
+	fmt.Println("  google | bing | baidu | jike | perplexity | bilibili | youtube | github |chatgpt")
+
 }
