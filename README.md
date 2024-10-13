@@ -83,6 +83,3 @@ search [搜索引擎] <搜索内容>
 ## 许可证
 
 本项目采用 MIT 许可证。详细信息请参见 [LICENSE](LICENSE) 文件。
-
-Gosearch是一个简单的命令行工具，可以在终端中直接搜索内容并打开浏览器进行搜索。支持多种搜索引擎，包括Google、Bing、Baidu、Bilibili、Jike、Youtube、ChatGPT和GitHub
-
