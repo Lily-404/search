@@ -52,7 +52,9 @@ func main() {
 	case "perplexity":
 		url = fmt.Sprintf("https://www.perplexity.ai/?q=%s", strings.ReplaceAll(query, " ", "+"))
 	case "jike":
-		url = fmt.Sprintf("https://web.okjike.com/search?keyword=%s", strings.ReplaceAll(query, " ", "+"))
+		url = fmt.Sprintf("https://web.okjike.com/search?keyword=%s&q=%s", 
+			strings.ReplaceAll(query, " ", "+"),
+			strings.ReplaceAll(query, " ", "+"))
 	case "bilibili":
 		url = fmt.Sprintf("https://search.bilibili.com/all?keyword=%s", strings.ReplaceAll(query, " ","+"))
 	case "youtube":
