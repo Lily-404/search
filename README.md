@@ -1,30 +1,34 @@
 # Gosearch
 
-Gosearch是一个简单的命令行工具，可以在终端中直接搜索内容并打开浏览器进行搜索。支持多种搜索引擎，包括Google、Bing、Baidu、Bilibili、Jike、Youtube、ChatGPT和GitHub
+![1744819750767](images/README/info.png)
 
-## 功能特性
+[English](README.md) | [中文](README_zh.md)
 
-- 支持多种搜索引擎
-- 默认使用Google搜索引擎
-- 可以通过环境变量设置默认搜索引擎
-- 支持在终端中直接运行搜索命令
+Gosearch is a simple command-line tool that allows you to search content directly from your terminal and open the results in your browser. It supports multiple search engines, including Google, Bing, Baidu, Bilibili, Jike, Youtube, ChatGPT, and GitHub.
 
-## 安装
+## Features
 
-1. 确保你已经安装了Go编程语言。
-2. 克隆本仓库或下载`search.go`文件。
-3. 编译Go程序：
+- Support for multiple search engines
+- Google as the default search engine
+- Configurable default search engine through environment variables
+- Direct search commands from the terminal
+
+## Installation
+
+1. Make sure you have Go programming language installed.
+2. Clone this repository or download the `search.go` file.
+3. Compile the Go program:
 
    ```
    go build -o search search.go
    ```
-4. 将生成的 `search` 可执行文件移动到你的 `PATH` 目录中，例如 `/usr/local/bin`：
+4. Move the generated `search` executable to your `PATH` directory, for example `/usr/local/bin`:
 
    ```
    sudo mv search /usr/local/bin/
    ```
 
-   或者，你可以将 `search` 文件放在 `$HOME/bin` 目录中，并确保该目录在你的 `PATH` 中：
+   Alternatively, you can place the `search` file in your `$HOME/bin` directory and ensure it's in your `PATH`:
 
    ```
    mkdir -p $HOME/bin
@@ -32,39 +36,39 @@ Gosearch是一个简单的命令行工具，可以在终端中直接搜索内容
    export PATH=$HOME/bin:$PATH
    ```
 
-## 使用说明
+## Usage
 
-### 设置默认搜索引擎
+### Setting the Default Search Engine
 
 ```
 search -s || --set
 ```
 
-### 运行搜索命令
+### Running Search Commands
 
-在终端中运行以下命令进行搜索：
+Run the following command in the terminal to perform a search:
 
 ```
-search [搜索引擎] <搜索内容>
+search [search_engine] <search_content>
 ```
 
-- `搜索引擎`：可选参数，指定搜索引擎，支持 `google`、`bing`、`baidu`、`jike`、`perplextity`、`bilibibli`、`youtube`、`github`、`chatgpt`。
-- `搜索内容`：必填参数，指定要搜索的内容。
+- `search_engine`: Optional parameter to specify the search engine. Supports `google`, `bing`, `baidu`, `jike`, `perplextity`, `bilibibli`, `youtube`, `github`, `chatgpt`.
+- `search_content`: Required parameter specifying the content to search for.
 
-### 示例
+### Examples
 
-1. 使用默认搜索引擎进行搜索：
-
-   ```
-   search 你好
-   ```
-2. 指定搜索引擎进行搜索：
+1. Search using the default search engine:
 
    ```
-   search bing 你好
+   search hello
+   ```
+2. Search using a specific search engine:
+
+   ```
+   search bing hello
    ```
 
-## 支持的搜索引擎
+## Supported Search Engines
 
 - Google
 - Bing
@@ -76,10 +80,10 @@ search [搜索引擎] <搜索内容>
 - Bilibili
 - Youtube
 
-## 贡献
+## Contributing
 
-欢迎贡献代码和提出问题。请在 GitHub 上提交 Issue 或 Pull Request。
+Contributions and issue reports are welcome. Please submit Issues or Pull Requests on GitHub.
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。详细信息请参见 [LICENSE](LICENSE) 文件。
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
