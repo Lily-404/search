@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"gosearch/config"
+	"github.com/Lily-404/search/config"
 )
 
 func Help() {

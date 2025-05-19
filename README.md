@@ -12,25 +12,38 @@ Gosearch is a simple command-line tool that allows you to search content directl
 - Google as the default search engine
 - Configurable default search engine through environment variables
 - Direct search commands from the terminal
+- Fast and lightweight
+- Cross-platform support (Windows, macOS, Linux)
 
 ## Installation
 
-1. Make sure you have Go programming language installed.
-2. Clone this repository or download the `search.go` file.
-3. Compile the Go program:
+### Method 1: Using go install (Recommended)
 
+```bash
+go install github.com/Lily-404/search@latest
+```
+
+### Method 2: Manual Installation
+
+1. Make sure you have Go programming language installed.
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/Lily-404/search.git
+   cd search
    ```
+3. Compile the Go program:
+   ```bash
    go build -o search search.go
    ```
-4. Move the generated `search` executable to your `PATH` directory, for example `/usr/local/bin`:
+4. Move the generated `search` executable to your `PATH` directory:
 
-   ```
+   For macOS/Linux:
+   ```bash
    sudo mv search /usr/local/bin/
    ```
 
-   Alternatively, you can place the `search` file in your `$HOME/bin` directory and ensure it's in your `PATH`:
-
-   ```
+   Or place it in your `$HOME/bin` directory:
+   ```bash
    mkdir -p $HOME/bin
    mv search $HOME/bin/
    export PATH=$HOME/bin:$PATH
@@ -40,7 +53,7 @@ Gosearch is a simple command-line tool that allows you to search content directl
 
 ### Setting the Default Search Engine
 
-```
+```bash
 search -s || --set
 ```
 
@@ -48,7 +61,7 @@ search -s || --set
 
 Run the following command in the terminal to perform a search:
 
-```
+```bash
 search [search_engine] <search_content>
 ```
 
@@ -58,19 +71,25 @@ search [search_engine] <search_content>
 ### Examples
 
 1. Search using the default search engine:
+   ```bash
+   search hello world
+   ```
 
-   ```
-   search hello
-   ```
 2. Search using a specific search engine:
-
+   ```bash
+   search bing hello world
+   search github golang
+   search youtube music
    ```
-   search bing hello
+
+3. Search with special characters:
+   ```bash
+   search "how to use git"
    ```
 
 ## Supported Search Engines
 
-- Google
+- Google (default)
 - Bing
 - Baidu
 - GitHub
@@ -80,10 +99,29 @@ search [search_engine] <search_content>
 - Bilibili
 - Youtube
 
+## Use Cases
+
+- Quick web searches from terminal
+- Developer documentation lookup
+- Video content search
+- Code repository search
+- AI-powered search
+- Academic research
+
 ## Contributing
 
-Contributions and issue reports are welcome. Please submit Issues or Pull Requests on GitHub.
+Contributions and issue reports are welcome! Please feel free to:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Lily-404/search&type=Date)](https://star-history.com/#Lily-404/search&Date)
