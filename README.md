@@ -54,7 +54,7 @@ go install github.com/Lily-404/search@latest
 ### Setting the Default Search Engine
 
 ```bash
-search -s || --set
+search -s
 ```
 
 ### Running Search Commands
@@ -62,42 +62,41 @@ search -s || --set
 Run the following command in the terminal to perform a search:
 
 ```bash
-search [search_engine] <search_content>
+search [engine_name] <search_content>
 ```
 
-- `search_engine`: Optional parameter to specify the search engine. Supports `google`, `bing`, `baidu`, `jike`, `perplextity`, `bilibibli`, `youtube`, `github`, `chatgpt`.
-- `search_content`: Required parameter specifying the content to search for.
+- `engine_name`: 可选参数，指定搜索引擎。支持如下 engine name：
+
+```
+google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
+```
+
+- `search_content`: 必填参数，指定要搜索的内容。
 
 ### Examples
 
-1. Search using the default search engine:
+1. 使用默认搜索引擎：
    ```bash
    search hello world
    ```
-
-2. Search using a specific search engine:
+2. 使用指定搜索引擎：
    ```bash
-   search bing hello world
-   search github golang
-   search youtube music
+   search google hello world
+   search zhihu golang
+   search weibo 热搜
+   search v2ex go mod
+   search xiaohongshu 美食
    ```
-
-3. Search with special characters:
+3. 搜索带有特殊字符的内容：
    ```bash
    search "how to use git"
    ```
 
 ## Supported Search Engines
 
-- Google (default)
-- Bing
-- Baidu
-- GitHub
-- Perplexity
-- ChatGPT
-- Jike
-- Bilibili
-- Youtube
+```
+google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
+```
 
 ## Use Cases
 

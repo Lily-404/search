@@ -31,28 +31,7 @@ var rootCmd = &cobra.Command{
 and open the results in your browser.
 
 Supported search engines:
-  • Google
-  • Bing
-  • Baidu
-  • GitHub
-  • ChatGPT
-  • Perplexity AI
-  • Jike
-  • Bilibili
-  • YouTube
-  • DuckDuckGo
-  • Brave Search
-  • Stack Overflow
-  • Wikipedia
-  • Reddit
-  • X (formerly Twitter)
-  • Medium
-  • Quora
-  • LinkedIn
-  • arXiv
-  • Google Scholar
-  • 知乎
-  • 豆瓣`,
+  google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		versionFlag, _ := cmd.Flags().GetBool("version")
 		if versionFlag {
