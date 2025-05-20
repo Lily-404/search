@@ -7,7 +7,6 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/Lily-404/search/config"
 	"github.com/fatih/color"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
@@ -18,11 +17,11 @@ var searchCmd = &cobra.Command{
 	Short: "Search content using the default search engine",
 	Long:  `Search content using the default search engine and open the results in your browser.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		config.Init()
-		engine := config.DefaultEngine
+		InitConfig()
+		engine := DefaultEngine
 		if engine == nil {
-			config.Init()
-			engine = config.DefaultEngine
+			InitConfig()
+			engine = DefaultEngine
 		}
 		performSearch(*engine, strings.Join(args, " "))
 		return nil

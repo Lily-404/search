@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Lily-404/search/cmd/search"
+import "github.com/Lily-404/search/internal/search"
 
 func main() {
 	search.Execute()

@@ -1,4 +1,4 @@
-package config
+package search
 
 import (
 	"encoding/json"
@@ -16,7 +16,7 @@ func SetDefaultEngine(s string) {
 	saveConfig()
 }
 
-func Init() {
+func InitConfig() {
 	loadConfig()
 	if DefaultEngine == nil {
 		defaultValue := "google"

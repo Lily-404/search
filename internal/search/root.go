@@ -5,13 +5,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Lily-404/search/config"
 	"github.com/fatih/color"
 	"github.com/manifoldco/promptui"
 	"github.com/spf13/cobra"
 )
 
-var version = "1.1.0"
+var version = "1.2.0"
 
 func PrintVersion() {
 	fmt.Println(`
@@ -31,7 +30,7 @@ var rootCmd = &cobra.Command{
 and open the results in your browser.
 
 Supported search engines:
-  google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo`,
+  google | bing | baidu | github | chatgpt | perplexity | jike | bilibili | youtube | duckduckgo | brave | stackoverflow | wikipedia | reddit | x | medium | quora | linkedin | arxiv | scholar | zhihu | douban | v2ex | xiaohongshu | weibo`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		versionFlag, _ := cmd.Flags().GetBool("version")
 		if versionFlag {
@@ -61,11 +60,11 @@ Supported search engines:
 		}
 
 		// 否则使用默认搜索引擎
-		config.Init()
-		engine := config.DefaultEngine
+		InitConfig()
+		engine := DefaultEngine
 		if engine == nil {
-			config.Init()
-			engine = config.DefaultEngine
+			InitConfig()
+			engine = DefaultEngine
 		}
 		performSearch(*engine, strings.Join(args, " "))
 		return nil
@@ -106,7 +105,7 @@ func setDefaultEngine() {
 	}
 
 	selectedEngine := engines[index]
-	config.SetDefaultEngine(selectedEngine.Name)
+	SetDefaultEngine(selectedEngine.Name)
 
 	// 使用颜色显示设置结果
 	color.Green("\n✓ Default search engine set to: %s", selectedEngine.Description)
