@@ -1,10 +1,11 @@
 # Gosearch
 
-![1744819750767](images/README/info.png)
+![Gosearch Logo](images/README/info.png)
 
 [English](README.md) | [中文](README_zh.md)
 
 Gosearch 是一个简单的命令行工具，允许你直接从终端搜索内容并在浏览器中打开结果。
+
 ## 功能特点
 
 - 支持多个搜索引擎
@@ -32,7 +33,7 @@ go install github.com/Lily-404/search@latest
    ```
 3. 编译 Go 程序：
    ```bash
-   go build -o search search.go
+   go build -o search
    ```
 4. 将生成的 `search` 可执行文件移动到你的 `PATH` 目录：
 
@@ -56,6 +57,8 @@ go install github.com/Lily-404/search@latest
 search -s
 ```
 
+![设置默认搜索引擎](images/README/set-default.png)
+
 ### 运行搜索命令
 
 在终端中运行以下命令执行搜索：
@@ -67,7 +70,7 @@ search [engine_name] <search_content>
 - `engine_name`：可选参数，指定搜索引擎。支持如下 engine name：
 
 ```
-google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
+google | bing | baidu | github | chatgpt | perplexity | jike | bilibili | youtube | duckduckgo | brave | stackoverflow | wikipedia | reddit | x | medium | quora | linkedin | arxiv | scholar | zhihu | douban | v2ex | xiaohongshu | weibo
 ```
 
 - `search_content`：必填参数，指定要搜索的内容。
@@ -78,6 +81,8 @@ google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckd
    ```bash
    search hello world
    ```
+   ![默认搜索](images/README/default-search.png)
+
 2. 使用指定搜索引擎：
    ```bash
    search google hello world
@@ -86,6 +91,8 @@ google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckd
    search v2ex go mod
    search xiaohongshu 美食
    ```
+   ![特定搜索引擎搜索](images/README/specific-search.png)
+
 3. 搜索带有特殊字符的内容：
    ```bash
    search "how to use git"

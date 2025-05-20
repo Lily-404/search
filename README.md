@@ -1,6 +1,6 @@
 # Gosearch
 
-![1744819750767](images/README/info.png)
+![Gosearch Logo](images/README/info.png)
 
 [English](README.md) | [中文](README_zh.md)
 
@@ -33,7 +33,7 @@ go install github.com/Lily-404/search@latest
    ```
 3. Compile the Go program:
    ```bash
-   go build -o search search.go
+   go build -o search
    ```
 4. Move the generated `search` executable to your `PATH` directory:
 
@@ -57,6 +57,8 @@ go install github.com/Lily-404/search@latest
 search -s
 ```
 
+![Setting Default Engine](images/README/set-default.png)
+
 ### Running Search Commands
 
 Run the following command in the terminal to perform a search:
@@ -68,7 +70,7 @@ search [engine_name] <search_content>
 - `engine_name`:  Optional parameter to specify the search engine. The following engine names are supported:
 
 ```
-google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
+google | bing | baidu | github | chatgpt | perplexity | jike | bilibili | youtube | duckduckgo | brave | stackoverflow | wikipedia | reddit | x | medium | quora | linkedin | arxiv | scholar | zhihu | douban | v2ex | xiaohongshu | weibo
 ```
 
 - `search_content`: Required parameter specifying the content to search for.
@@ -79,6 +81,8 @@ google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckd
    ```bash
    search hello world
    ```
+   ![Default Search](images/README/default-search.png)
+
 2. Use a specified search engine:
    ```bash
    search google hello world
@@ -87,11 +91,12 @@ google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckd
    search v2ex go mod
    search xiaohongshu 美食
    ```
+   ![Specific Engine Search](images/README/specific-search.png)
+
 3. Search for content containing special characters:
    ```bash
    search "how to use git"
    ```
-
 
 ## Use Cases
 
