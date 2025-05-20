@@ -4,7 +4,7 @@
 
 [English](README.md) | [中文](README_zh.md)
 
-Gosearch is a simple command-line tool that allows you to search content directly from your terminal and open the results in your browser. It supports multiple search engines, including Google, Bing, Baidu, Bilibili, Jike, Youtube, ChatGPT, and GitHub.
+Gosearch is a simple command-line tool that allows you to search content directly from your terminal and open the results in your browser. 
 
 ## Features
 
@@ -65,21 +65,21 @@ Run the following command in the terminal to perform a search:
 search [engine_name] <search_content>
 ```
 
-- `engine_name`: 可选参数，指定搜索引擎。支持如下 engine name：
+- `engine_name`:  Optional parameter to specify the search engine. The following engine names are supported:
 
 ```
 google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
 ```
 
-- `search_content`: 必填参数，指定要搜索的内容。
+- `search_content`: Required parameter specifying the content to search for.
 
 ### Examples
 
-1. 使用默认搜索引擎：
+1. Use the default search engine:
    ```bash
    search hello world
    ```
-2. 使用指定搜索引擎：
+2. Use a specified search engine:
    ```bash
    search google hello world
    search zhihu golang
@@ -87,16 +87,11 @@ google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckd
    search v2ex go mod
    search xiaohongshu 美食
    ```
-3. 搜索带有特殊字符的内容：
+3. Search for content containing special characters:
    ```bash
    search "how to use git"
    ```
 
-## Supported Search Engines
-
-```
-google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
-```
 
 ## Use Cases
 
