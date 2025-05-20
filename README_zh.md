@@ -4,8 +4,7 @@
 
 [English](README.md) | [中文](README_zh.md)
 
-Gosearch 是一个简单的命令行工具，允许你直接从终端搜索内容并在浏览器中打开结果。它支持多个搜索引擎，包括 Google、Bing、Baidu、Bilibili、Jike、Youtube、ChatGPT 和 GitHub。
-
+Gosearch 是一个简单的命令行工具，允许你直接从终端搜索内容并在浏览器中打开结果。
 ## 功能特点
 
 - 支持多个搜索引擎
@@ -91,12 +90,6 @@ google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckd
    ```bash
    search "how to use git"
    ```
-
-## 支持的搜索引擎
-
-```
-google, bing, baidu, github, chatgpt, perplexity, jike, bilibili, youtube, duckduckgo, brave, stackoverflow, wikipedia, reddit, x, medium, quora, linkedin, arxiv, scholar, zhihu, douban, v2ex, xiaohongshu, weibo
-```
 
 ## 使用场景
 
